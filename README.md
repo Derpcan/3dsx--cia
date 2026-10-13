@@ -1,6 +1,6 @@
 # 3dsx--cia
 ### A small script for compiling 3dsx to cia directly on GitHub
-**Do not use this for piracy**
+### Do **not** use this for piracy
 ---
 ## Setup
 1. Fork the repository
