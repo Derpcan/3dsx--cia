@@ -11,7 +11,7 @@ jobs:
   convert:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install dependencies
         run: |
@@ -49,7 +49,7 @@ jobs:
           rm -f temp.cxi banner.bnr
 
       - name: Upload CIA artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: cia-build
           path: ./*.cia
@@ -58,6 +58,6 @@ jobs:
 
       - name: Attach CIA to Release
         if: startsWith(github.ref, 'refs/tags/v')
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: ./*.cia
